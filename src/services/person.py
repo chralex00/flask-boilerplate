@@ -17,7 +17,10 @@ def find_one(id):
     try:
         app.logger.info(f"PersonService: finding a person by ID {id}...")
         personFound = PersonDao.find_one_by_id(id)
-        app.logger.info(f"Person with id {id} {"found" if personFound != None else "not found"}!")
+        if personFound != None:
+            app.logger.info(f"Person with id {id} found!")
+        else:
+            app.logger.info(f"Person with id {id} not found!")
         return personFound
     except Exception as exception:
         app.logger.info(f"PersonService: find_one terminated with error at {datetime.today()}")
