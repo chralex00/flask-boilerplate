@@ -1,0 +1,39 @@
+# Compiled Output
+dist/
+docs/_build/
+
+# Code Editor and IDE
+/.idea
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# Python and VENV
+__pycache__/
+.pytest_cache/
+.venv/
+
+# Test Coverage
+.coverage
+.coverage.*
+htmlcov/
+
+# OS
+.DS_Store
+
+# Other
+.tox/
+
+# SQLite3
+*.db
+
+# Env Variables
+.env

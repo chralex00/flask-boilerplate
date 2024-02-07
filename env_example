@@ -1,0 +1,10 @@
+# listening port
+LISTENING_PORT=8088
+
+# for datbase
+DATABASE_NAME=flask-boilerplate.db
+
+# for docker
+DOCKER_CONTAINER_NAME=flask-boilerplate
+DOCKER_IMAGE_NAME=flask-boilerplate
+DOCKER_PORT=8088

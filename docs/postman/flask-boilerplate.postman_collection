@@ -1,0 +1,167 @@
+{
+	"info": {
+		"_postman_id": "1661fc5f-eca3-4de2-975f-d8bb37f58f24",
+		"name": "flask-boilerplate",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10313594"
+	},
+	"item": [
+		{
+			"name": "person",
+			"item": [
+				{
+					"name": "create one",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Mario\",\r\n    \"last_name\": \"Rossi\",\r\n    \"birthday_year\": 1985,\r\n    \"gender\": \"MALE\",\r\n    \"email\": \"mario.rossi@email.it\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/people",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"people"
+							]
+						},
+						"description": "Create a Person by first and last name, birthday year, gender and email."
+					},
+					"response": []
+				},
+				{
+					"name": "find all",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/people",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"people"
+							]
+						},
+						"description": "Find and return all people."
+					},
+					"response": []
+				},
+				{
+					"name": "find one by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/people/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"people",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Find a person by ID."
+					},
+					"response": []
+				},
+				{
+					"name": "update one",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"first_name\": \"Federica\",\r\n    \"last_name\": \"Verdi\",\r\n    \"birthday_year\": 1991,\r\n    \"gender\": \"FEMALE\",\r\n    \"email\": \"federica.verdi@email.it\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BASE_URL}}/people/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"people",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						},
+						"description": "Update first and last name, birthday_year, gender and email of a Person by ID."
+					},
+					"response": []
+				},
+				{
+					"name": "delete one by id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/people/:id",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"people",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						},
+						"description": "Delete a Person by ID."
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "healthcheck",
+			"item": [
+				{
+					"name": "healthcheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{BASE_URL}}/healthcheck",
+							"host": [
+								"{{BASE_URL}}"
+							],
+							"path": [
+								"healthcheck"
+							]
+						},
+						"description": "It always returns HTTP status 200 OK, with service name and status \"up\"."
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
